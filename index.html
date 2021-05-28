@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="">
+
+        <style>
+            .card {
+              box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+              transition: 0.3s;
+              /* width: 40%; */
+            }
+            
+            .card:hover {
+              box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            }
+            
+            .container {
+              padding: 2px 16px;
+            }
+            .btn {
+               float: right;
+            }
+            #errorMsg{
+                display: none;
+            }
+            input#number {
+            text-align: center;
+            border: none;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            margin: 0px;
+            width: 40px;
+            height: 40px;
+            }
+            </style>
+    </head>
+    <body style="background-color: #eee;">
+
+       
+        <div class="container">
+            <div class="row">
+               
+                <div class="col-md-12">
+                    <h2>Card</h2> 
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert" id="errorMsg">
+                        <strong>Ooops!</strong> <span  id="errorText"></span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                </div>
+                <!-- <div class="col-md-4"> -->
+                    <div class="card col-md-4">
+                        <img src="img_avatar.png" alt="Avatar" style="width:100%">
+                        <div class="container">
+                          <h4><b>Hoodie</b></h4> 
+                          <p>Architect & Engineer</p> 
+                          <p id="price">90</p> 
+                          <button class="btn btn-primary add-to-cart" data-id="1" data-price="90" data-product="Hoodie">Add to cart</button>
+                        </div>
+                    </div>
+                    <div class="card col-md-4">
+                        <img src="img_avatar.png" alt="Avatar" style="width:100%">
+                        <div class="container">
+                          <h4><b>Shirt</b></h4> 
+                          <p>Architect & Engineer</p> 
+                          <p id="price">400</p> 
+                          <button class="btn btn-primary add-to-cart" data-id="2" data-price="400" data-product="Shirt">Add to cart</button>
+                        </div>
+                    </div>
+                    <div class="card col-md-4">
+                        <img src="img_avatar.png" alt="Avatar" style="width:100%">
+                        <div class="container">
+                          <h4><b>Joggers</b></h4> 
+                          <p>Architect & Engineer</p> 
+                          <p id="price">30</p> 
+                          <button class="btn btn-primary add-to-cart" data-id="3" data-price="30" data-product="Joggers">Add to cart</button>
+                        </div>
+                    </div>
+                <!-- </div> -->
+                <br><br>
+               
+                
+            </div>
+            <div class="row">
+                <table class="table table-dark" id="shopTable">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Product</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+            </div>
+        </div>
+        
+
+
+
+
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+        <script src="custom.js" async defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </body>
+</html>
