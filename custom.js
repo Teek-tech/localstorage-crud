@@ -53,13 +53,13 @@ $(document).ready(function() {
     console.log(cartItems);
     if(cartItems && cartItems.length > 0){
        // console.log("yesss");
-
+        let totalAmount = 0
         for(var i=0; i<cartItems.length; i++){
             var id = cartItems[i].productID;
             var product = cartItems[i].product;
             var price = cartItems[i].price;
             var quantity = cartItems[i].quantity;
-
+            totalAmount += parseInt(cartItems[i].price)
             var tr_str = "<tr>" +
               "<td>" + id +  "</td>" +
               "<td>" + product + "</td>" +
@@ -70,6 +70,8 @@ $(document).ready(function() {
 
             $("#shopTable tbody").append(tr_str);
          }
+         console.log(totalAmount);
+         $('#total').text(totalAmount);
     }
 
         //remove item from cart by id
