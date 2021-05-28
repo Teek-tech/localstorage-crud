@@ -11,26 +11,7 @@
         <link rel="stylesheet" href="">
 
         <style>
-            .card {
-              box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-              transition: 0.3s;
-              /* width: 40%; */
-            }
-            
-            .card:hover {
-              box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-            }
-            
-            .container {
-              padding: 2px 16px;
-            }
-            .btn {
-               float: right;
-            }
-            .cart {
-               float: left;
-               margin-top: 30px;
-            }
+           
             #errorMsg, #successMsg{
                 display: none;
             }
@@ -50,52 +31,15 @@
        
         <div class="container">
             <div class="row">
-               
+                <h2>Cart items</h2>
                 <div class="col-md-12">
-                    <h2>Card</h2> 
-                    <div class="alert alert-warning alert-dismissible fade show" role="alert" id="errorMsg">
-                        <strong>Ooops!</strong> <span  id="errorText"></span>
+                    <div class="alert alert-success alert-dismissible fade show" role="alert" id="successMsg">
+                        <strong>Yeaa!</strong> <span  id="successText"></span>
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
+                        <span aria-hidden="true">&times;</span>
                         </button>
-                      </div>
-
-                    
+                    </div>
                 </div>
-                <!-- <div class="col-md-4"> -->
-                    <div class="card col-md-4">
-                        <img src="img_avatar.png" alt="Avatar" style="width:100%">
-                        <div class="container">
-                          <h4><b>Hoodie</b></h4> 
-                          <p>Architect & Engineer</p> 
-                          <p id="price">90</p> 
-                          <button class="btn btn-primary add-to-cart" data-id="1" data-price="90" data-product="Hoodie">Add to cart</button>
-                        </div>
-                    </div>
-                    <div class="card col-md-4">
-                        <img src="img_avatar.png" alt="Avatar" style="width:100%">
-                        <div class="container">
-                          <h4><b>Shirt</b></h4> 
-                          <p>Architect & Engineer</p> 
-                          <p id="price">400</p> 
-                          <button class="btn btn-primary add-to-cart" data-id="2" data-price="400" data-product="Shirt">Add to cart</button>
-                        </div>
-                    </div>
-                    <div class="card col-md-4">
-                        <img src="img_avatar.png" alt="Avatar" style="width:100%">
-                        <div class="container">
-                          <h4><b>Joggers</b></h4> 
-                          <p>Architect & Engineer</p> 
-                          <p id="price">30</p> 
-                          <button class="btn btn-primary add-to-cart" data-id="3" data-price="30" data-product="Joggers">Add to cart</button>
-                        </div>
-                    </div>
-                <!-- </div> -->
-                <br><br>
-               
-                
-            </div>
-            <!-- <div class="row">
                 <table class="table table-dark" id="shopTable">
                     <thead>
                       <tr>
@@ -108,15 +52,7 @@
                     </thead>
                     <tbody></tbody>
                   </table>
-            </div> -->
-        <div>
-            <a href="cart.html">
-            <button class="btn btn-primary cart">
-                View Cart
-            </button>
-        </a>
-        </div>
-           
+            </div>
         </div>
         
 
