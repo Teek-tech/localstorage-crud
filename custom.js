@@ -24,7 +24,7 @@ $(document).ready(function() {
         getProductID = shoppingCart.findIndex((product => product.productID == productID));
         if(shoppingCart[getProductID]){
             console.log("You have already added this item t cart! " + shoppingCart[getProductID].price)
-            $('#errorText').text('You have already added this item t cart!');
+            $('#errorText').text('You have already added this item to cart!');
             $('#errorMsg').show();
         }else{
             shoppingCart.push({
@@ -88,6 +88,11 @@ $(document).ready(function() {
                 updateCart = shoppingCart.findIndex((product => product.productID == this.id));
                 //update quantity
                 shoppingCart[updateCart].quantity = this.value
+                
+                if(updateCart){
+                    $('#successText').text('Quantity updated successfullly.');
+                    $('#successMsg').show();
+                }
                 //save updates
              localStorage.setItem('MezitoxShop', JSON.stringify(shoppingCart));
             })
