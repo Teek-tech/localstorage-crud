@@ -63,7 +63,7 @@ $(document).ready(function() {
             var tr_str = "<tr>" +
               "<td>" + id +  "</td>" +
               "<td>" + product + "</td>" +
-              "<td> <input type='number' value=" + quantity + " id='number'></td>" +
+              "<td> <input type='number' value=" + quantity + " id="+id+" class='updateProduct'></td>" +
               "<td> "+ price + "</td>" +
               "<td><i class='fa fa-trash removeProduct' style='color:red' id="+id+"></i></td>" +
             "</tr>";
@@ -80,29 +80,16 @@ $(document).ready(function() {
         localStorage.setItem('MezitoxShop', JSON.stringify(filteredProducts));
         })
 
+
+         //update item from cart by id
+         $("#shopTable tbody").on('change', '.updateProduct', function(){
+            //Find index of specific object using findIndex method.
+             let shoppingCart = JSON.parse(localStorage.getItem('MezitoxShop'));    
+                updateCart = shoppingCart.findIndex((product => product.productID == this.id));
+                //update quantity
+                shoppingCart[updateCart].quantity = this.value
+                //save updates
+             localStorage.setItem('MezitoxShop', JSON.stringify(shoppingCart));
+            })
+
 })
-
-
-
-
-
-
-// //Initailize array of objects.
-// let myArray = [
-//     {id: 0, name: "Jhon"},
-//     {id: 1, name: "Sara"},
-//     {id: 2, name: "Domnic"},
-//     {id: 3, name: "Bravo"}
-//   ],
-      
-//   //Find index of specific object using findIndex method.    
-//   objIndex = myArray.findIndex((obj => obj.id == 1));
-  
-//   //Log object to Console.
-//   console.log("Before update: ", myArray[objIndex])
-  
-//   //Update object's name property.
-//   myArray[objIndex].name = "Laila"
-  
-//   //Log object to console again.
-//   console.log("After update: ", myArray[objIndex])
